@@ -38,6 +38,8 @@ export const StackedChart = () => {
 
     return (
         <AreaChart
+            startAngle={0}
+            endAngle={0}
             width={800}
             height={400}
             data={data}
@@ -64,9 +66,9 @@ export const StackedChart = () => {
             <CartesianGrid strokeDasharray="3 3" />
             <Tooltip content={<CustomTooltip />} />
             <Legend />
-            <Area type="monotone" dataKey="data1" stroke="#8884d8" fillOpacity={1} fill="url(#data1)" />
-            <Area type="monotone" dataKey="data2" stroke="#82ca9d" fillOpacity={1} fill="url(#data2)" />
-            <Area type="monotone" dataKey="data3" stroke="#ffc658" fillOpacity={1} fill="url(#data3)" />
+            <Area type="linear" dataKey="data1" stroke="#8884d8" fillOpacity={1} fill="url(#data1)" />
+            <Area type="linear" dataKey="data2" stroke="#82ca9d" fillOpacity={1} fill="url(#data2)" />
+            <Area type="linear" dataKey="data3" stroke="#ffc658" fillOpacity={1} fill="url(#data3)" />
             <ReferenceLine y={290000} stroke="green" strokeWidth={2} strokeDasharray="3 3" />
             <ReferenceLine y={90000} stroke="red" strokeWidth={2} strokeDasharray="3 3" />
         </AreaChart>
